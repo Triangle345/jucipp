@@ -1,13 +1,13 @@
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-access-control -DJUCI_BUILD_PATH=\\\"${CMAKE_BINARY_DIR}\\\" -DJUCI_TESTS_PATH=\\\"${CMAKE_CURRENT_SOURCE_DIR}\\\"")
 
 set(stub_files
-    stubs/config.cc
-    stubs/dialogs.cc
-    stubs/directories.cc
-    stubs/info.cc
-    stubs/selectiondialog.cc
-    stubs/terminal.cc
-    stubs/tooltips.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/config.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/dialogs.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/directories.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/info.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/selectiondialog.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/terminal.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs/tooltips.cc
 )
 
 add_library(stubs OBJECT ${stub_files})
